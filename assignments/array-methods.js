@@ -89,7 +89,25 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//The event director needs a list of all the company names involved in the 5k run.  Create a new array called companyNames that includes a list of all companies.
+let companyNames = [];
+
+runners.forEach((item) => companyNames.push(item.company_name));
+
+console.log(companyNames);
 
 // Problem 2
+// The event director needs to have all the runner's last names converted to lowercase because he has no respect. Convert each last name into lowercase and log the result.
+let lowCase = [];
+
+lowCase = runners.map((item) => item.last_name.toLowerCase());
+
+console.log(lowCase);
 
 // Problem 3
+// The small shirts won't be available for the event due to an ordering issue.  Get a list of runners with small shirts so they can be told to wait. Return an array named backorderedShirts that contains information about the runners that have a shirt size of S and log the result
+let backorderedShirts = [];
+
+backorderedShirts = runners.filter((size) => size.shirt_size === 'S' );
+
+console.log(backorderedShirts);
