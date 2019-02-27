@@ -1,6 +1,21 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+// A house
+function house() {
+  console.log(`I am in the house!`);
+  const message = "Go to sleep!";
+  debugger;
+  
+  // A room in our house
+  function room() {
+    const roomSaying = "I am in the room!";
+    console.log(`${roomSaying} And I got the message: ${message}`);
+    debugger;
+  }
+  room();
+}
+house();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
